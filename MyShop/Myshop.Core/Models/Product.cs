@@ -28,4 +28,3 @@ namespace MyShop.Core.Models
         }
     }
 }
- 2 

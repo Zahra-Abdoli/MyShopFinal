@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.Cashing;
+using System.Runtime.Caching;
 using MyShop.Core.Models;
 using System.Security.Cryptography.X509Certificates;
 
@@ -58,5 +58,24 @@ namespace MyShop.DataAccess.InMemory
             }
 
         }
+        public IQueryable<Product> Collection()
+        {
+            return products.AsQueryable();
+        }
+        public void Delete(string Id)
+        {
+            Product productToDelete = products.Find(p => p.Id == Id);
+
+
+            if (productToDelete != null)
+            {
+                products.Remove(productToDelete);
+            }
+            else
+            {
+                throw new Exception("Product not found!");
+            }
+        }
+    
     }
 }

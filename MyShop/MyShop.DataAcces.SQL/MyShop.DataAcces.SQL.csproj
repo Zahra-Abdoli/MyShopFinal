@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlRepositpry.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Myshop.Core\Myshop.Core.csproj">

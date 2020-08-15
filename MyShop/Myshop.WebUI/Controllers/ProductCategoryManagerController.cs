@@ -45,7 +45,7 @@ namespace MyShop.WebUI.Controllers
 
             }
         }
-        public ActionResult Edit(string Id)
+            public ActionResult Edit(string Id)
         {
             ProductCategory productCategory = context.Find(Id);
             if (productCategory == null)
